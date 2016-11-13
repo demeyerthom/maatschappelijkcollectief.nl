@@ -1,0 +1,23 @@
+---
+ip: "192.168.10.10"
+memory: 2048
+cpus: 1
+hostname: maatschappelijkcollectief-nl
+name: maatschappelijkcollectief-nl
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: "C:/Users/Thomas/PhpstormProjects/maatschappelijkcollectief.nl"
+      to: "/home/vagrant/maatschappelijkcollectief-nl"
+
+sites:
+    - map: maatschappelijkcollectief.dev
+      to: "/home/vagrant/maatschappelijkcollectief-nl"
+
+databases:
+    - maatschappelijkcollectief
